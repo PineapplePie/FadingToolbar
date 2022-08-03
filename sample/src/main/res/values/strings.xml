@@ -1,0 +1,9 @@
+<resources>
+	<string name="app_name">FadingToolbar</string>
+	<string name="cards">Cards</string>
+
+	<string name="open_recycler_activity">Open an activity with a recycler view</string>
+	<string name="open_scrollview_activity">Open an activity with a scroll view</string>
+	<string name="open_recycler_compose_activity">Open an activity with a recycler view (compose)</string>
+	<string name="open_scrollview_compose_activity">Open an activity with a scroll view (compose)</string>
+</resources>
