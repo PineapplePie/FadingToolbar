@@ -53,13 +53,19 @@ fun FadingTopBarLazyColumn(
         }
     }
 
+    val showElevation = remember {
+        derivedStateOf {
+            listState.firstVisibleItemScrollOffset > 0
+        }
+    }
+
     Scaffold(
         topBar = {
             TopAppBar(
                 modifier = topBarModifier,
                 backgroundColor = topBarBackgroundColor,
                 contentPadding = topBarContentPadding,
-                elevation = if (!showTitle.value && !listState.isScrollInProgress) 0.dp else shadowSize.value,
+                elevation = if (showElevation.value) shadowSize.value else 0.dp,
             ) {
                 AnimatedVisibility(
                     visible = showTitle.value,
