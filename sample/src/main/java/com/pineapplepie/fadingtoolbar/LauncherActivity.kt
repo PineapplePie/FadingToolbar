@@ -3,8 +3,7 @@ package com.pineapplepie.fadingtoolbar
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.pineapplepie.fadingtoolbar.compose.SampleComposeRecyclerActivity
-import com.pineapplepie.fadingtoolbar.compose.SampleComposeScrollViewActivity
+import com.pineapplepie.fadingtoolbar.compose.SampleComposeLazyColumnActivity
 import com.pineapplepie.fadingtoolbar.databinding.ActivityLauncherBinding
 import com.pineapplepie.fadingtoolbar.xml.SampleXmlRecyclerActivity
 import com.pineapplepie.fadingtoolbar.xml.SampleXmlScrollViewActivity
@@ -44,16 +43,7 @@ class LauncherActivity : AppCompatActivity() {
             startActivity(
                 Intent(
                     this@LauncherActivity,
-                    SampleComposeRecyclerActivity::class.java
-                )
-            )
-        }
-
-        openScrollViewComposeCard.setOnClickListener {
-            startActivity(
-                Intent(
-                    this@LauncherActivity,
-                    SampleComposeScrollViewActivity::class.java
+                    SampleComposeLazyColumnActivity::class.java
                 )
             )
         }

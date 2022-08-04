@@ -4,6 +4,9 @@
 
 	<string name="open_recycler_activity">Open an activity with a recycler view</string>
 	<string name="open_scrollview_activity">Open an activity with a scroll view</string>
-	<string name="open_recycler_compose_activity">Open an activity with a recycler view (compose)</string>
-	<string name="open_scrollview_compose_activity">Open an activity with a scroll view (compose)</string>
+	<string name="open_recycler_compose_activity">Open an activity with a lazy column (compose)</string>
+
+	<string name="text_mock">Just a test text</string>
+	<string name="text_mock_2">And another!</string>
+
 </resources>

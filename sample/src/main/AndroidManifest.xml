@@ -27,8 +27,7 @@
 
 		<activity android:name=".xml.SampleXmlScrollViewActivity"/>
 
-		<activity android:name=".compose.SampleComposeRecyclerActivity"/>
+		<activity android:name=".compose.SampleComposeLazyColumnActivity"/>
 
-		<activity android:name=".compose.SampleComposeScrollViewActivity"/>
 	</application>
 </manifest>
