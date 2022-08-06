@@ -4,11 +4,11 @@ import android.animation.Animator
 import android.view.ViewGroup
 import android.view.ViewPropertyAnimator
 import android.widget.TextView
-import androidx.core.view.forEach
+import androidx.core.view.children
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-fun RecyclerView.addOnScrollListener(onScrolled: () -> Unit) {
+internal fun RecyclerView.addOnScrollListener(onScrolled: () -> Unit) {
     addOnScrollListener(object : RecyclerView.OnScrollListener() {
         override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
             onScrolled()
@@ -19,7 +19,7 @@ fun RecyclerView.addOnScrollListener(onScrolled: () -> Unit) {
 /**
  * supports only a linear layout manager right now
  */
-fun RecyclerView.isScrolledToTop(): Boolean {
+internal fun RecyclerView.isScrolledToTop(): Boolean {
     val elevationThreshold = context.getElevationThreshold()
     val layoutManager = (layoutManager as LinearLayoutManager)
     val position = layoutManager.findFirstVisibleItemPosition()
@@ -30,20 +30,18 @@ fun RecyclerView.isScrolledToTop(): Boolean {
 /**
  * supports only a linear layout manager right now
  */
-fun RecyclerView.isFirstItemVisible(): Boolean {
+internal fun RecyclerView.isFirstItemVisible(): Boolean {
     return (layoutManager as LinearLayoutManager).findFirstVisibleItemPosition() == 0
 }
 
 /**
- * used for finding a title in a MaterialToolbar/Toolbar classes
+ * used for finding a title in a Toolbar class
  */
-fun ViewGroup.findTextView(): TextView? {
-    var toolbarTextView: TextView? = null
-    forEach { if (it is TextView) toolbarTextView = it }
-    return toolbarTextView
-}
+internal fun ViewGroup.findTextView(): TextView? =
+    children.firstOrNull { it is TextView } as? TextView
 
-fun ViewPropertyAnimator.withCancelOrEndAction(cancelOrEnd: () -> Unit): ViewPropertyAnimator {
+
+internal fun ViewPropertyAnimator.withCancelOrEndAction(cancelOrEnd: () -> Unit): ViewPropertyAnimator {
     setListener(object : Animator.AnimatorListener {
         override fun onAnimationStart(p0: Animator?) {
         }

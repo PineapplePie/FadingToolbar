@@ -16,8 +16,8 @@ import androidx.compose.ui.unit.dp
 fun Card(color: Color, modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
-            .padding(16.dp, 8.dp, 16.dp, 8.dp)
-            .clip(RoundedCornerShape(16.dp, 16.dp, 16.dp, 16.dp))
+            .padding(vertical = 8.dp, horizontal = 16.dp)
+            .clip(RoundedCornerShape(size = 16.dp))
             .fillMaxWidth()
             .height(160.dp)
             .background(color)

@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.ScrollView
 import androidx.recyclerview.widget.RecyclerView
 
-fun View.updateElevation(
+internal fun View.updateElevation(
     recyclerView: RecyclerView,
     size: Int,
 ) {
@@ -14,7 +14,7 @@ fun View.updateElevation(
     elevation = if (shouldHide) 0f else size.toFloat()
 }
 
-fun View.updateElevation(
+internal fun View.updateElevation(
     scrollView: ScrollView,
     size: Int,
 ) {
@@ -22,7 +22,7 @@ fun View.updateElevation(
     elevation = if (shouldHide) 0f else size.toFloat()
 }
 
-fun Context.getElevationThreshold() = TypedValue.applyDimension(
+internal fun Context.getElevationThreshold() = TypedValue.applyDimension(
     TypedValue.COMPLEX_UNIT_DIP,
     2f,
     resources.displayMetrics

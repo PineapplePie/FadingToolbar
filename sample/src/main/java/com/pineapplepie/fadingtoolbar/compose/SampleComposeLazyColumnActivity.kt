@@ -37,7 +37,7 @@ fun LazyColumnScreen() {
         .textFontWeight(FontWeight.SemiBold)
         .textModifier(
             Modifier.padding(
-                16.dp, 8.dp, 16.dp, 8.dp
+                horizontal = 16.dp, vertical = 8.dp
             )
         )
         .build()
@@ -47,7 +47,7 @@ fun LazyColumnScreen() {
         .textFontWeight(FontWeight.Bold)
         .textModifier(
             Modifier.padding(
-                16.dp, 8.dp, 16.dp, 8.dp
+                horizontal = 16.dp, vertical = 8.dp
             )
         )
         .build()

@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.appbar.MaterialToolbar
 
 class FadingToolbarAnimator {
 
@@ -33,21 +32,6 @@ class FadingToolbarAnimator {
     }
 
     fun bind(
-        toolbar: MaterialToolbar,
-        recyclerView: RecyclerView,
-        withShadow: Boolean = true
-    ) {
-        val toolbarTextView = toolbar.findTextView() ?: return
-        initialSetUp(toolbarTextView)
-
-        recyclerView.addOnScrollListener {
-            if (withShadow) toolbar.updateElevation(recyclerView, config.elevationSize)
-            val isFirstItemVisible = recyclerView.isFirstItemVisible()
-            animateToolbarText(toolbarTextView, !isFirstItemVisible)
-        }
-    }
-
-    fun bind(
         toolbar: Toolbar,
         recyclerView: RecyclerView,
         withShadow: Boolean = true
@@ -64,23 +48,6 @@ class FadingToolbarAnimator {
 
     fun bind(
         toolbar: Toolbar,
-        footerView: View,
-        scrollView: ScrollView,
-        withShadow: Boolean = true
-    ) {
-        val toolbarTextView = toolbar.findTextView() ?: return
-        initialSetUp(toolbarTextView)
-
-        scrollView.setOnScrollChangeListener { _, _, _, _, _ ->
-            if (withShadow) toolbar.updateElevation(scrollView, config.elevationSize)
-            val scrollBounds = Rect()
-            scrollView.getHitRect(scrollBounds)
-            animateToolbarText(toolbarTextView, !footerView.getLocalVisibleRect(scrollBounds))
-        }
-    }
-
-    fun bind(
-        toolbar: MaterialToolbar,
         footerView: View,
         scrollView: ScrollView,
         withShadow: Boolean = true
