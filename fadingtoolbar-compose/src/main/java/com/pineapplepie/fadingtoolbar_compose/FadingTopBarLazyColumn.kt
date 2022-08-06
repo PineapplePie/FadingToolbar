@@ -15,7 +15,10 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.*
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
@@ -45,7 +48,6 @@ fun FadingTopBarLazyColumn(
     animationDuration: Int = DEFAULT_ANIMATION_DURATION,
     elevationSize: Dp = DEFAULT_ELEVATION_SIZE,
 ) {
-    val shadowSize = remember { mutableStateOf(elevationSize) }
     val listState = rememberLazyListState()
     val showTitle = remember {
         derivedStateOf {
@@ -65,7 +67,7 @@ fun FadingTopBarLazyColumn(
                 modifier = topBarModifier,
                 backgroundColor = topBarBackgroundColor,
                 contentPadding = topBarContentPadding,
-                elevation = if (showElevation.value) shadowSize.value else 0.dp,
+                elevation = if (showElevation.value) elevationSize else 0.dp,
             ) {
                 AnimatedVisibility(
                     visible = showTitle.value,
