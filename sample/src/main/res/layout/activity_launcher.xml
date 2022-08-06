@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fillViewport="true"
+	android:fitsSystemWindows="true">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<com.google.android.material.card.MaterialCardView
+			android:id="@+id/openRecyclerCard"
+			android:layout_width="match_parent"
+			android:layout_height="120dp"
+			app:cardCornerRadius="8dp"
+			android:layout_margin="16dp"
+			app:cardElevation="4dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:text="@string/open_recycler_activity"
+				android:textSize="20sp" />
+		</com.google.android.material.card.MaterialCardView>
+
+
+		<com.google.android.material.card.MaterialCardView
+			android:id="@+id/openScrollViewCard"
+			android:layout_width="match_parent"
+			android:layout_height="120dp"
+			android:layout_margin="16dp"
+			app:cardCornerRadius="8dp"
+			app:cardElevation="4dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:text="@string/open_scrollview_activity"
+				android:textSize="20sp" />
+		</com.google.android.material.card.MaterialCardView>
+
+
+		<com.google.android.material.card.MaterialCardView
+			android:id="@+id/openRecyclerComposeCard"
+			android:layout_width="match_parent"
+			android:layout_height="120dp"
+			android:layout_margin="16dp"
+			app:cardCornerRadius="8dp"
+			app:cardElevation="4dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:text="@string/open_recycler_compose_activity"
+				android:textSize="20sp" />
+		</com.google.android.material.card.MaterialCardView>
+
+	</LinearLayout>
+</ScrollView>
