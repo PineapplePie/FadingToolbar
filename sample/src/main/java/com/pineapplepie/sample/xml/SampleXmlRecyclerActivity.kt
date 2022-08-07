@@ -1,12 +1,12 @@
-package com.pineapplepie.fadingtoolbar.xml
+package com.pineapplepie.sample.xml
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pineapplepie.fadingtoolbar.FadingToolbarAnimator
-import com.pineapplepie.fadingtoolbar.databinding.ActivitySampleRecyclerBinding
-import com.pineapplepie.fadingtoolbar.models
-import com.pineapplepie.fadingtoolbar.xml.adapter.SampleAdapter
+import com.pineapplepie.sample.databinding.ActivitySampleRecyclerBinding
+import com.pineapplepie.sample.models
+import com.pineapplepie.sample.xml.adapter.SampleAdapter
 
 class SampleXmlRecyclerActivity : AppCompatActivity() {
 

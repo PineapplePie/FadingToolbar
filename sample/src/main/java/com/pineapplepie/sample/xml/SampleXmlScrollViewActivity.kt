@@ -1,9 +1,9 @@
-package com.pineapplepie.fadingtoolbar.xml
+package com.pineapplepie.sample.xml
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.pineapplepie.fadingtoolbar.FadingToolbarAnimator
-import com.pineapplepie.fadingtoolbar.databinding.ActivitySampleScrollViewBinding
+import com.pineapplepie.sample.databinding.ActivitySampleScrollViewBinding
 
 class SampleXmlScrollViewActivity : AppCompatActivity() {
 

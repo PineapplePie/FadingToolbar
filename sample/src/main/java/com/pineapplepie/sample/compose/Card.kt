@@ -1,4 +1,4 @@
-package com.pineapplepie.fadingtoolbar.compose
+package com.pineapplepie.sample.compose
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

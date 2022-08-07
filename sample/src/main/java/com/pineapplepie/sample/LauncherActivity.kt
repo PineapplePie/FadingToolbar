@@ -1,12 +1,12 @@
-package com.pineapplepie.fadingtoolbar
+package com.pineapplepie.sample
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.pineapplepie.fadingtoolbar.compose.SampleComposeLazyColumnActivity
-import com.pineapplepie.fadingtoolbar.databinding.ActivityLauncherBinding
-import com.pineapplepie.fadingtoolbar.xml.SampleXmlRecyclerActivity
-import com.pineapplepie.fadingtoolbar.xml.SampleXmlScrollViewActivity
+import com.pineapplepie.sample.compose.SampleComposeLazyColumnActivity
+import com.pineapplepie.sample.databinding.ActivityLauncherBinding
+import com.pineapplepie.sample.xml.SampleXmlRecyclerActivity
+import com.pineapplepie.sample.xml.SampleXmlScrollViewActivity
 
 class LauncherActivity : AppCompatActivity() {
 

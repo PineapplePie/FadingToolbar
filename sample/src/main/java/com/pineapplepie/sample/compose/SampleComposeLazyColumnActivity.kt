@@ -1,4 +1,4 @@
-package com.pineapplepie.fadingtoolbar.compose
+package com.pineapplepie.sample.compose
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -14,9 +14,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.pineapplepie.fadingtoolbar.R
 import com.pineapplepie.fadingtoolbar_compose.FadingTopBarLazyColumn
 import com.pineapplepie.fadingtoolbar_compose.config.TextConfig
+import com.pineapplepie.sample.R
 
 class SampleComposeLazyColumnActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
