@@ -1,4 +1,4 @@
-package com.pineapplepie.fadingtoolbar
+package com.pineapplepie.sample
 
 import androidx.annotation.ColorRes
 import androidx.annotation.StringRes

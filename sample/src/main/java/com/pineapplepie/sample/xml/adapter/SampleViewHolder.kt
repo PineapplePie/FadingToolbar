@@ -1,12 +1,12 @@
-package com.pineapplepie.fadingtoolbar.xml.adapter
+package com.pineapplepie.sample.xml.adapter
 
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
-import com.pineapplepie.fadingtoolbar.SampleModel
-import com.pineapplepie.fadingtoolbar.TitleModel
-import com.pineapplepie.fadingtoolbar.databinding.ItemSampleBinding
-import com.pineapplepie.fadingtoolbar.databinding.ItemTitleBinding
+import com.pineapplepie.sample.SampleModel
+import com.pineapplepie.sample.TitleModel
+import com.pineapplepie.sample.databinding.ItemSampleBinding
+import com.pineapplepie.sample.databinding.ItemTitleBinding
 
 open class BaseViewHolder<T : ViewBinding>(binding: T) : RecyclerView.ViewHolder(binding.root) {
 

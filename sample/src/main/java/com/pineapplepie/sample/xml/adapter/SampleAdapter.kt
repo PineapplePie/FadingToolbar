@@ -1,14 +1,14 @@
-package com.pineapplepie.fadingtoolbar.xml.adapter
+package com.pineapplepie.sample.xml.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.pineapplepie.fadingtoolbar.SampleModel
-import com.pineapplepie.fadingtoolbar.TitleModel
-import com.pineapplepie.fadingtoolbar.UiModel
-import com.pineapplepie.fadingtoolbar.databinding.ItemSampleBinding
-import com.pineapplepie.fadingtoolbar.databinding.ItemTitleBinding
+import com.pineapplepie.sample.SampleModel
+import com.pineapplepie.sample.TitleModel
+import com.pineapplepie.sample.UiModel
+import com.pineapplepie.sample.databinding.ItemSampleBinding
+import com.pineapplepie.sample.databinding.ItemTitleBinding
 
 class SampleAdapter : RecyclerView.Adapter<BaseViewHolder<*>>() {
 
