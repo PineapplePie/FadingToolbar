@@ -53,7 +53,7 @@ fun LazyColumnScreen() {
         .build()
     FadingTopBarLazyColumn(
         listContent = {
-            item { Card(Color.DarkGray) }
+            item { Card(Color.Blue) }
             item { Card(Color.Cyan) }
             item {
                 Text(
@@ -78,8 +78,23 @@ fun LazyColumnScreen() {
             item { Card(Color.Yellow) }
         },
         topBarText = context.getString(R.string.cards),
+        footerText = context.getString(R.string.cards),
         topBarTextConfig = topBarTextConfig,
         topBarBackgroundColor = Color.White,
+        footerTextConfig = footerTextConfig,
+    )
+
+    FadingTopBarLazyColumn(
+        listContent = {
+            // your item or items here
+            item {}
+            item {}
+            item {}
+        },
+        topBarText = "Your text here!", // your text here
+        footerText =  "Your second text here!", // your text here, but you can skip it if both texts should be the same
+        topBarTextConfig = topBarTextConfig,
+        topBarBackgroundColor = Color.White, // your color here
         footerTextConfig = footerTextConfig,
     )
 }
