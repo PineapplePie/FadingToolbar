@@ -10,7 +10,7 @@ Main points:
 - Easy to use - just pass your UI components and they will be animated right away
 - Kotlin-based and lightweight.
 
-![Sample](https://github.com/PineapplePie/FadingToolbar/tree/main/sample/sample.gif)
+![Sample](https://github.com/PineapplePie/FadingToolbar/blob/develop/sample/sample.gif)
 
 ## Download
 
