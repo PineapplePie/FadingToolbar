@@ -20,6 +20,6 @@ class SampleXmlScrollViewActivity : AppCompatActivity() {
     }
 
     private fun setupScrollView() = with(binding) {
-        animator.bind(toolbar, footerText, scrollView)
+        animator.bind(toolbar, headerText, scrollView)
     }
 }

@@ -32,7 +32,9 @@ import com.pineapplepie.fadingtoolbar_compose.config.TextConfig
 fun FadingTopBarLazyColumn(
     contentModifier: Modifier = Modifier,
     listContent: LazyListScope.() -> Unit,
-    topBarContent: @Composable RowScope.() -> Unit = {},
+
+    topBarNavigationContent: @Composable RowScope.() -> Unit = {},
+    topBarActionContent: @Composable RowScope.() -> Unit = {},
     topBarContentPadding: PaddingValues = AppBarDefaults.ContentPadding,
     topBarModifier: Modifier = Modifier,
     topBarBackgroundColor: Color = MaterialTheme.colors.primarySurface,
@@ -41,9 +43,9 @@ fun FadingTopBarLazyColumn(
     topBarTextStyle: TextStyle = LocalTextStyle.current,
     topBarTextConfig: TextConfig = TextConfig.Builder().build(),
 
-    footerText: String = topBarText,
-    footerTextStyle: TextStyle = LocalTextStyle.current,
-    footerTextConfig: TextConfig = TextConfig.Builder().build(),
+    headerText: String = topBarText,
+    headerTextStyle: TextStyle = LocalTextStyle.current,
+    headerTextConfig: TextConfig = TextConfig.Builder().build(),
 
     animationDuration: Int = DEFAULT_ANIMATION_DURATION,
     elevationSize: Dp = DEFAULT_ELEVATION_SIZE,
@@ -69,6 +71,7 @@ fun FadingTopBarLazyColumn(
                 contentPadding = topBarContentPadding,
                 elevation = if (showElevation.value) elevationSize else 0.dp,
             ) {
+                topBarNavigationContent()
                 AnimatedVisibility(
                     visible = showTitle.value,
                     enter = fadeIn(animationSpec = tween(durationMillis = animationDuration)),
@@ -76,7 +79,7 @@ fun FadingTopBarLazyColumn(
                 ) {
                     AppBarText(topBarText, topBarTextConfig, topBarTextStyle)
                 }
-                topBarContent()
+                topBarActionContent()
             }
         },
         content = { padding ->
@@ -91,9 +94,9 @@ fun FadingTopBarLazyColumn(
                     content = {
                         item {
                             AppBarText(
-                                text = footerText,
-                                config = footerTextConfig,
-                                style = footerTextStyle,
+                                text = headerText,
+                                config = headerTextConfig,
+                                style = headerTextStyle,
                             )
                         }
                         listContent()
