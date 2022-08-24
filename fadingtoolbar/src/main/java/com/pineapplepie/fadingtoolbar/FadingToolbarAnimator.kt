@@ -48,7 +48,7 @@ class FadingToolbarAnimator {
 
     fun bind(
         toolbar: Toolbar,
-        footerView: View,
+        headerText: View,
         scrollView: ScrollView,
         withShadow: Boolean = true
     ) {
@@ -59,7 +59,7 @@ class FadingToolbarAnimator {
             if (withShadow) toolbar.updateElevation(scrollView, config.elevationSize)
             val scrollBounds = Rect()
             scrollView.getHitRect(scrollBounds)
-            animateToolbarText(toolbarTextView, !footerView.getLocalVisibleRect(scrollBounds))
+            animateToolbarText(toolbarTextView, !headerText.getLocalVisibleRect(scrollBounds))
         }
     }
 

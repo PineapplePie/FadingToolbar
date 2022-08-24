@@ -22,6 +22,6 @@ class SampleViewHolder(private val binding: ItemSampleBinding) : BaseViewHolder<
 class TitleViewHolder(private val binding: ItemTitleBinding) : BaseViewHolder<ItemTitleBinding>(binding) {
 
     fun bind(model: TitleModel) = with(binding) {
-        footerText.text = root.context.getString(model.text)
+        headerText.text = root.context.getString(model.text)
     }
 }
