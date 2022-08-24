@@ -41,7 +41,7 @@ fun LazyColumnScreen() {
             )
         )
         .build()
-    val footerTextConfig = TextConfig.Builder()
+    val headerTextConfig = TextConfig.Builder()
         .textFontSize(32.sp)
         .textColor(Color.Black)
         .textFontWeight(FontWeight.Bold)
@@ -78,9 +78,9 @@ fun LazyColumnScreen() {
             item { Card(Color.Yellow) }
         },
         topBarText = context.getString(R.string.cards),
-        footerText = context.getString(R.string.cards),
+        headerText = context.getString(R.string.cards),
         topBarTextConfig = topBarTextConfig,
         topBarBackgroundColor = Color.White,
-        footerTextConfig = footerTextConfig,
+        headerTextConfig = headerTextConfig,
     )
 }

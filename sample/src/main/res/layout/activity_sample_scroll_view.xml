@@ -34,7 +34,7 @@
 			android:paddingHorizontal="16dp">
 
 			<TextView
-				android:id="@+id/footerText"
+				android:id="@+id/headerText"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:text="@string/cards"

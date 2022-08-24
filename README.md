@@ -1,10 +1,10 @@
 # FadingToolbar
 
-![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.2-blue.svg)
 ![minSdkVersion](https://img.shields.io/badge/minSdk-23-red.svg)
 ![compileSdkVersion](https://img.shields.io/badge/compileSdkVersion-32-green.svg)
 
-FadingToolbar is an animation library which fades out your footer view in a ScrollView/RecyclerView and fades in a toolbar title (analogue of the LargeTitle animation in iOS).
+FadingToolbar is an animation library which fades out your header view in a ScrollView/RecyclerView and fades in a toolbar title (analogue of the LargeTitle animation in iOS).
 Main points:
 - Supports both XML and Compose.
 - Easy to use - just pass your UI components and they will be animated right away
@@ -27,8 +27,8 @@ Add the dependency (you can put one of them or include both)
 
 ```
 dependencies {
-    implementation 'com.github.PineapplePie.FadingToolbar:fadingtoolbar:1.0.1' // XML version
-    implementation 'com.github.PineapplePie.FadingToolbar:fadingtoolbar-compose:1.0.1' // Compose version
+    implementation 'com.github.PineapplePie.FadingToolbar:fadingtoolbar:1.0.2' // XML version
+    implementation 'com.github.PineapplePie.FadingToolbar:fadingtoolbar-compose:1.0.2' // Compose version
 }
 ```
 
@@ -51,9 +51,9 @@ val topBarTextConfig = TextConfig.Builder()
     )
     .build()
 
-// Footer text customization
+// Header text customization
 
-val footerTextConfig = TextConfig.Builder()
+val headerTextConfig = TextConfig.Builder()
     .textFontSize(32.sp)
     .textFontWeight(FontWeight.Bold)
     .textModifier(
@@ -69,10 +69,10 @@ FadingTopBarLazyColumn(
         item {}
     },
     topBarText = "Your text here!", // your text here
-    footerText = "Your second text here!", // your text here, but you can skip it if both texts are the same
+    headerText = "Your second text here!", // your text here, but you can skip it if both texts are the same
     topBarTextConfig = topBarTextConfig,
     topBarBackgroundColor = Color.White, // your color here
-    footerTextConfig = footerTextConfig,
+    headerTextConfig = headerTextConfig,
  )
 ```
 
@@ -95,7 +95,7 @@ private fun setupAnimator() = with(binding) {
 private val animator by lazy { FadingToolbarAnimator() }
 
 private fun setupAnimator() = with(binding) {
-    animator.bind(toolbar, footerView, scrollView) // your Toolbar, footer View and RecyclerView here
+    animator.bind(toolbar, headerView, scrollView) // your Toolbar, header View and RecyclerView here
 }
 ```
 
