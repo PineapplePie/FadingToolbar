@@ -1,6 +1,6 @@
 # FadingToolbar
 
-![Version](https://img.shields.io/badge/version-1.0.2-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.3-blue.svg)
 ![minSdkVersion](https://img.shields.io/badge/minSdk-23-red.svg)
 ![compileSdkVersion](https://img.shields.io/badge/compileSdkVersion-32-green.svg)
 
@@ -27,8 +27,8 @@ Add the dependency (you can put one of them or include both)
 
 ```
 dependencies {
-    implementation 'com.github.PineapplePie.FadingToolbar:fadingtoolbar:1.0.2' // XML version
-    implementation 'com.github.PineapplePie.FadingToolbar:fadingtoolbar-compose:1.0.2' // Compose version
+    implementation 'com.github.PineapplePie.FadingToolbar:fadingtoolbar:1.0.3' // XML version
+    implementation 'com.github.PineapplePie.FadingToolbar:fadingtoolbar-compose:1.0.3' // Compose version
 }
 ```
 
