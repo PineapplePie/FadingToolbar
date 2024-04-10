@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+    namespace rootProject.libId
     compileSdk rootProject.targetSdk
 
     defaultConfig {
@@ -21,11 +22,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility rootProject.java
+        targetCompatibility rootProject.java
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = rootProject.jvmTarget
     }
 }
 

@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+    namespace rootProject.libIdCompose
     compileSdk rootProject.targetSdk
 
     defaultConfig {
@@ -21,11 +22,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility rootProject.java
+        targetCompatibility rootProject.java
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = rootProject.jvmTarget
     }
 
     buildFeatures {
@@ -33,15 +34,15 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion '1.2.0'
+        kotlinCompilerExtensionVersion rootProject.composeCompiler
     }
 }
 
 dependencies {
 
     implementation "androidx.core:core-ktx:$rootProject.core"
-    implementation "androidx.compose.ui:ui:$rootProject.composeUi"
-    implementation "androidx.compose.material:material:$rootProject.composeMaterial"
-    implementation "androidx.compose.foundation:foundation:$rootProject.composeFoundation"
+    implementation "androidx.compose.ui:ui:$rootProject.compose"
+    implementation "androidx.compose.material:material:$rootProject.compose"
+    implementation "androidx.compose.foundation:foundation:$rootProject.compose"
     implementation "androidx.appcompat:appcompat:$rootProject.appCompat"
 }
