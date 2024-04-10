@@ -1,8 +1,8 @@
 # FadingToolbar
 
-![Version](https://img.shields.io/badge/version-1.0.3-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.4-blue.svg)
 ![minSdkVersion](https://img.shields.io/badge/minSdk-23-red.svg)
-![compileSdkVersion](https://img.shields.io/badge/compileSdkVersion-32-green.svg)
+![compileSdkVersion](https://img.shields.io/badge/compileSdkVersion-34-green.svg)
 
 FadingToolbar is an animation library which fades out your header view in a ScrollView/RecyclerView and fades in a toolbar title (analogue of the LargeTitle animation in iOS).
 Main points:
@@ -27,8 +27,8 @@ Add the dependency (you can put one of them or include both)
 
 ```
 dependencies {
-    implementation 'com.github.PineapplePie.FadingToolbar:fadingtoolbar:1.0.3' // XML version
-    implementation 'com.github.PineapplePie.FadingToolbar:fadingtoolbar-compose:1.0.3' // Compose version
+    implementation 'com.github.PineapplePie.FadingToolbar:fadingtoolbar:1.0.4' // XML version
+    implementation 'com.github.PineapplePie.FadingToolbar:fadingtoolbar-compose:1.0.4' // Compose version
 }
 ```
 
