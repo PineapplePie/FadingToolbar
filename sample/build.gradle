@@ -5,12 +5,13 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    namespace "com.pineapplepie.sample"
+    compileSdk 34
 
     defaultConfig {
-        applicationId "com.pineapplepie.fadingtoolbar"
+        applicationId "com.pineapplepie.sample"
         minSdk 23
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -24,11 +25,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility rootProject.java
+        targetCompatibility rootProject.java
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = rootProject.jvmTarget
     }
 
     buildFeatures {
@@ -37,7 +38,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion '1.2.0'
+        kotlinCompilerExtensionVersion rootProject.composeCompiler
     }
 }
 
@@ -46,9 +47,9 @@ dependencies {
     implementation project(':fadingtoolbar-compose')
 
     implementation "androidx.core:core-ktx:$rootProject.core"
-    implementation "androidx.compose.ui:ui:$rootProject.composeUi"
-    implementation "androidx.compose.material:material:$rootProject.composeMaterial"
-    implementation "androidx.compose.foundation:foundation:$rootProject.composeFoundation"
+    implementation "androidx.compose.ui:ui:$rootProject.compose"
+    implementation "androidx.compose.material:material:$rootProject.compose"
+    implementation "androidx.compose.foundation:foundation:$rootProject.compose"
     implementation "androidx.appcompat:appcompat:$rootProject.appCompat"
 
     implementation 'androidx.appcompat:appcompat:1.4.2'

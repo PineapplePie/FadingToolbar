@@ -43,18 +43,18 @@ internal fun ViewGroup.findTextView(): TextView? =
 
 internal fun ViewPropertyAnimator.withCancelOrEndAction(cancelOrEnd: () -> Unit): ViewPropertyAnimator {
     setListener(object : Animator.AnimatorListener {
-        override fun onAnimationStart(p0: Animator?) {
+        override fun onAnimationStart(p0: Animator) {
         }
 
-        override fun onAnimationEnd(p0: Animator?) {
+        override fun onAnimationEnd(p0: Animator) {
             cancelOrEnd()
         }
 
-        override fun onAnimationCancel(p0: Animator?) {
+        override fun onAnimationCancel(p0: Animator) {
             cancelOrEnd()
         }
 
-        override fun onAnimationRepeat(p0: Animator?) {
+        override fun onAnimationRepeat(p0: Animator) {
         }
     })
     return this
