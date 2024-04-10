@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
@@ -28,6 +29,19 @@ android {
     kotlinOptions {
         jvmTarget = rootProject.jvmTarget
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+}
+
+java {
+    sourceCompatibility rootProject.java
+    targetCompatibility rootProject.java
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
 
 dependencies {
@@ -35,4 +49,18 @@ dependencies {
     implementation "androidx.core:core-ktx:$rootProject.core"
     implementation "androidx.appcompat:appcompat:$rootProject.appCompat"
     implementation "com.google.android.material:material:$rootProject.material"
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = rootProject.groupId
+            artifactId = rootProject.libArtifact
+            version = rootProject.libVersion
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
 }

@@ -23,4 +23,8 @@ ext {
 
     libId = "com.pineapplepie.fadingtoolbar"
     libIdCompose = "com.pineapplepie.fadingtoolbar_compose"
+    libVersion = "1.0.4"
+    libArtifact = "fadingtoolbar"
+    libArtifactCompose = "fadingtoolbar-compose"
+    groupId = "com.pineapplepie"
 }
